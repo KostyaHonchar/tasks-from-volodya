@@ -39,6 +39,12 @@
 }
 
 .showcase-photo {
-  width: 1800px;
+  width: 2100px;
   background-size: cover;
+}
+
+.showcase,
+.highlights {
+  position: relative;
+  padding: 100px;
 }

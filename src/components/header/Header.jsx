@@ -15,6 +15,7 @@ function Header() {
             <a href="/register" className='header-registration'>РЕЄСТРАЦІЯ</a>
          </section>
       </section>
-)}
+   )
+}
 
 export default Header;
