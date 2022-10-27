@@ -15,16 +15,11 @@ import { palette } from "@mui/system";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <Showcase />
-      <Highlights sx={{ boxShadow: 1 }} />
-      <img
-        src={ShowcaseImage}
-        alt="Logo"
-        className="showcase-photo"
-        width="500px"
-      />
+      <Highlights />
+      <img src={ShowcaseImage} alt="Logo" />
     </div>
   );
 }
