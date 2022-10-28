@@ -34,7 +34,7 @@ export default function ComboBox() {
       disablePortal
       id="combo-box-demo"
       options={categoryWithOptions()}
-      sx={{ width: 300 }}
+      sx={{ width: 250, justifyContent: 'center' }}
       renderInput={(params) => <TextField {...params} label="Оберіть категорію" />}
     />
   );

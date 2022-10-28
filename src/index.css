@@ -5,13 +5,34 @@ body,
 #root,
 .app,
 .content {
-   height: 100%;
-   width: 100%;
    font-family: 'Roboto', sans-serif;
 
 }
 
+a {
+   color: #bebebe;
+   padding: 20px;
+   text-decoration: none;
+}
+
 .app {
-   display: flex;
    position: relative;
+   text-align: center;
+}
+
+.header-login {
+   margin-left: 200px;
+}
+
+.imgMain {
+   size: 50%;
+   z-index: -10;
+
+}
+
+.header {
+   background-color: #2e313d;
+   padding: 20px;
+   text-align: center;
+   border-radius: 4px;
 }
