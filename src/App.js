@@ -1,11 +1,17 @@
 import React from "react";
-import { Header } from "./components";
+import "./index.css";
+import ShowcaseImage from "./components/files/showcase.jpeg";
+import Header from "./components/header/Header";
+import Showcase from "./components/SearchBox/Combobox";
+import Highlights from "./components/SearchBox/Combobox2";
 
-import "./App.css";
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
+      <Showcase />
+      <Highlights />
+      <img src={ShowcaseImage} alt="Logo" className="imgMain" />
     </div>
   );
 }
