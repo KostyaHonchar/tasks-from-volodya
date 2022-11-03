@@ -1,71 +1,54 @@
+
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import parse from 'autosuggest-highlight/parse';
-import match from 'autosuggest-highlight/match';
 
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
-const top100Films = () => [
-   { title: 'Київ' },
-   { title: 'Львів' },
-   { title: 'Івано-Франківськ' },
-   { title: 'Тернопіль' },
-   { title: 'Луцьк' },
-   { title: 'Харків' },
-   { title: 'Одеса' },
-   { title: 'Рівне' },
-   { title: 'Дніпро' },
-   { title: 'Ужгород' },
-   { title: 'Чернівці' },
-   { title: 'Хмельницький' },
-   { title: 'Вінниця' },
-   { title: 'Запоріжжя' },
-   { title: 'Кривий Ріг' },
-   { title: 'Миколаїв' },
-   { title: 'Херсон' },
-   { title: 'Полтава' },
-   { title: 'Чернігів' },
-   { title: 'Черкаси' },
-   { title: 'Житомир' },
-   { title: 'Суми' },
-   { title: 'Кропивницький' },
-   { title: 'Маріуполь' },
-   { title: 'Усі міста України' },
+
+const cityOptions = () => [
+   { label: 'Київ' },
+   { label: 'Львів' },
+   { label: 'Івано-Франківськ' },
+   { label: 'Тернопіль' },
+   { label: 'Луцьк' },
+   { label: 'Харків' },
+   { label: 'Одеса' },
+   { label: 'Рівне' },
+   { label: 'Дніпро' },
+   { label: 'Ужгород' },
+   { label: 'Чернівці' },
+   { label: 'Хмельницький' },
+   { label: 'Вінниця' },
+   { label: 'Запоріжжя' },
+   { label: 'Кривий Ріг' },
+   { label: 'Миколаїв' },
+   { label: 'Херсон' },
+   { label: 'Полтава' },
+   { label: 'Чернігів' },
+   { label: 'Черкаси' },
+   { label: 'Житомир' },
+   { label: 'Суми' },
+   { label: 'Кропивницький' },
+   { label: 'Маріуполь' },
+   { label: 'Усі міста України' },
 
 
 ];
-
-export default function Highlights() {
+export default function ComboBox() {
    return (
-      <Autocomplete
-         id="highlights-demo"
-         sx={{ width: 300 }}
-         options={top100Films()}
-         getOptionLabel={(option) => option.title}
-         renderInput={(params) => (
-            <TextField {...params} label="Оберіть місто" margin="normal" />
-         )}
-         renderOption={(props, option, { inputValue }) => {
-            const matches = match(option.title, inputValue, { insideWords: true });
-            const parts = parse(option.title, matches);
-
-            return (
-               <li {...props}>
-                  <div>
-                     {parts.map((part, index) => (
-                        <span
-                           key={index}
-                           style={{
-                              fontWeight: part.highlight ? 700 : 400,
-                           }}
-                        >
-                           {part.text}
-                        </span>
-                     ))}
-                  </div>
-               </li>
-            );
-         }}
-      />
+      <div>
+         <span className='span-searchbox'>Місто
+            <Autocomplete
+               disablePortal
+               id="combo-box-demo2"
+               options={cityOptions()}
+               sx={{ width: 250, height: "100 %", bgcolor: "#fff", borderRadius: "3px ", color: "#999", mt: "10px" }}
+               renderInput={(params) => <TextField {...params} label="Оберіть категорію" />}
+            />
+         </span>
+      </div>
    );
 }
+
+
+
+

@@ -30,13 +30,18 @@ const categoryWithOptions = () => [
 
 export default function ComboBox() {
   return (
-    <Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={categoryWithOptions()}
-      sx={{ width: 250, justifyContent: 'center' }}
-      renderInput={(params) => <TextField {...params} label="Оберіть категорію" />}
-    />
+    <div className='searchbox-box'>
+      <span className='span-searchbox'>Категорія
+        <Autocomplete
+          className='combo-box-demo-class'
+          disablePortal
+          id="combo-box-demo"
+          options={categoryWithOptions()}
+          sx={{ width: 250, height: "100%", bgcolor: "#fff", borderRadius: "3px ", color: "#999", mt: "10px" }}
+          renderInput={(params) => <TextField sx={{}} {...params} label="Оберіть категорію" />}
+        />
+      </span>
+    </div>
   );
 }
 

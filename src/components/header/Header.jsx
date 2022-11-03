@@ -1,24 +1,35 @@
-import { Box } from '@mui/material';
 import React from 'react';
-import { palette } from '@mui/system';
-import logo from './components/header/logoGirko.svg'
-
 
 
 function Header() {
    return (
-      <Box className='header'>
-            <img src={logo} alt='Logo'/>
-            <a href="/" className='header-logo'>GIRKO</a>
-            <a href="/photographs" className='header-lists'>Фотографи</a>
-            <a href="/videomakers" className='header-lists'>Відеооператори</a>
-            <a href="/musicians" className='header-lists'>Музиканти</a>
-            <a href="/singers" className='header-lists'>Ведучі</a>
-            <a href="/restaurants" className='header-lists'>Ресторани</a>
-            <a href="/login" className='header-login'>ВХІД</a>
-            <a href="/register" className='header-registration'>РЕЄСТРАЦІЯ</a>
-         </Box>
+      <nav role='navigation'>
+         <ul className='nav-1'>
+            <li >
+               <a href="/" className='nav-logo'>
+                  <img className='logo-image' src='https://girko.net/static/new-des/images/logo.svg' alt='Logo' />
+                  <span className='logo-name'>GIRKO</span>
+               </a>
+            </li>
+         </ul>
+         <ul className='nav-2'>
+            <li className='nav-list'>
+               <li><a href="/photographs" className='nav-element'>Фотографи</a></li>
+               <li><a href="/videomakers" className='nav-element'>Відеооператори</a></li>
+               <li><a href="/musicians" className='nav-element'>Музиканти</a></li>
+               <li><a href="/singers" className='nav-element'>Ведучі</a></li>
+               <li><a href="/restaurants" className='nav-element'>Ресторани</a></li>
+            </li>
+         </ul>
+         <ul className='nav-3'>
+            <li className='nav-login'>
+               <li><a href="/login" className='nav-log'>Вхід</a></li>
+               <li><a href="/register" className='nav-regist'>РЕЄСТРАЦІЯ</a></li>
+            </li>
+         </ul>
+      </nav>
    )
 }
 
 export default Header;
+
