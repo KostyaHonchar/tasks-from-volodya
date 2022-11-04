@@ -2,51 +2,124 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Unstable_Grid2';
+import Card from '@mui/material/Card';
+import Link from '@mui/material/Link'
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 import CategoryGridImage1 from "./files/category-grid-image1.jpg";
 import CategoryGridImage2 from "./files/category-grid-image2.jpg";
 import CategoryGridImage3 from "./files/category-grid-image3.jpg";
 import CategoryGridImage4 from "./files/category-grid-image4.jpg";
 
-const Item = styled(Paper)(({ theme }) => ({
-   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-   ...theme.typography.body2,
-   padding: theme.spacing(0.5),
-   textAlign: 'center',
-   color: theme.palette.text.secondary,
-}));
 
-export default function AutoGrid() {
+
+export default function ImgMediaCard() {
    return (
-      <Box sx={{ flexGrow: 1 }}>
-         <Box>
-            <Grid container spacing={2}>
-               <Grid xs>
-                  <Item>Фотографи</Item>
-                  <img src={CategoryGridImage1} alt="Logo" className="category-grid-image" />
-                  <hr></hr>
-                  <div>
+      <Card>
+         {/* CARD 1 */}
+         <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+               component="img"
+               alt="photography"
+               height="140"
+               image={CategoryGridImage1}
+            />
+            <CardContent>
+               <Typography gutterBottom variant="h5" component="div">
+                  Фотографи
+               </Typography>
+            </CardContent>
+            <CardActions>
+               <Button size="small">
+                  <CardMedia
+                     component="img"
+                     alt="photo1"
+                     height="50px"
 
-                     <a href='/'>Анна Андріюк</a>
-                  </div>
-
-                  <hr></hr>
-                  <Item>Фотографи</Item>
-               </Grid>
-               <Grid xs>
-                  <Item>Відеооператори</Item>
-                  <img src={CategoryGridImage2} alt="Logo" className="category-grid-image" />
-               </Grid>
-               <Grid xs>
-                  <Item>Музиканти</Item>
-                  <img src={CategoryGridImage3} alt="Logo" className="category-grid-image" />
-               </Grid>
-               <Grid xs>
-                  <Item>Ведучі</Item>
-                  <img src={CategoryGridImage4} alt="Logo" className="category-grid-image" />
-               </Grid>
-            </Grid>
-         </Box>
-      </Box>
+                  />
+                  <Link>
+                     <Typography>
+                        Сергій Штай
+                     </Typography>
+                     <Typography>
+                        Львів,Тернопіль,Івано-Франківськ,Чернівці
+                     </Typography>
+                  </Link>
+               </Button>
+               <Button size="small">Learn More</Button>
+            </CardActions>
+         </Card>
+         {/* CARD 2 */}
+         <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+               component="img"
+               alt="green iguana"
+               height="140"
+               image="/static/images/cards/contemplative-reptile.jpg"
+            />
+            <CardContent>
+               <Typography gutterBottom variant="h5" component="div">
+                  Відеооператори
+               </Typography>
+               <Typography variant="body2" color="text.secondary">
+                  Lizards are a widespread group of squamate reptiles, with over 6,000
+                  species, ranging across all continents except Antarctica
+               </Typography>
+            </CardContent>
+            <CardActions>
+               <Button size="small">Share</Button>
+               <Button size="small">Learn More</Button>
+            </CardActions>
+         </Card>
+         {/* CARD 3 */}
+         <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+               component="img"
+               alt="green iguana"
+               height="140"
+               image="/static/images/cards/contemplative-reptile.jpg"
+            />
+            <CardContent>
+               <Typography gutterBottom variant="h5" component="div">
+                  Lizard
+               </Typography>
+               <Typography variant="body2" color="text.secondary">
+                  Lizards are a widespread group of squamate reptiles, with over 6,000
+                  species, ranging across all continents except Antarctica
+               </Typography>
+            </CardContent>
+            <CardActions>
+               <Button size="small">Share</Button>
+               <Button size="small">Learn More</Button>
+            </CardActions>
+         </Card>
+         {/* CARD 4 */}
+         <Card sx={{ maxWidth: 345 }}>
+            <CardMedia
+               component="img"
+               alt="green iguana"
+               height="140"
+               image="/static/images/cards/contemplative-reptile.jpg"
+            />
+            <CardContent>
+               <Typography gutterBottom variant="h5" component="div">
+                  Lizard
+               </Typography>
+               <Typography variant="body2" color="text.secondary">
+                  Lizards are a widespread group of squamate reptiles, with over 6,000
+                  species, ranging across all continents except Antarctica
+               </Typography>
+            </CardContent>
+            <CardActions>
+               <Button size="small">Share</Button>
+               <Button size="small">Learn More</Button>
+            </CardActions>
+         </Card>
+      </Card>
    );
 }
+
+
