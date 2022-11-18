@@ -18,10 +18,6 @@ import PhSm3 from "./files/panel-3-small.jpg"
 
 
 
-
-
-
-
 export default function ImgMediaCard() {
    return (
       <div className='cards-row'>
@@ -29,15 +25,14 @@ export default function ImgMediaCard() {
          <div className='card-1'>
             <div className='panel-header' >
                <h3 className='panel-title'>
-                  <SlCamera className='media-icon' />
-                  <a href='/#' className='panel-title-link'>Фотографи</a>
+                  <a href='/#' className='panel-title-link'><span className='media-span'><SlCamera className='media-icon' /></span>Фотографи
+                  </a>
                </h3>
                <a href="/#"><img alt='card-1' className='img-responsive' src={CategoryGridImage1} />
                </a>
-
             </div>
             <ul className='media-list'>
-               <li>
+               <li className='media-list-li'>
                   <a href="/#">
                      <div><img src={PhSm1} className='img-sm-round' alt="card1-media1" /></div>
                      <div className='media-body'>
@@ -46,7 +41,7 @@ export default function ImgMediaCard() {
                      </div>
                   </a>
                </li>
-               <li>
+               <li className='media-list-li'>
                   <a href="/#">
                      <div><img src={PhSm2} className='img-sm-round' alt="card1-media1" /></div>
                      <div className='media-body'>
@@ -55,7 +50,7 @@ export default function ImgMediaCard() {
                      </div>
                   </a>
                </li>
-               <li>
+               <li className='media-list-li'>
                   <a href="/#">
                      <div><img src={PhSm3} className='img-sm-round' alt="card1-media1" /></div>
                      <div className='media-body'>
@@ -71,15 +66,14 @@ export default function ImgMediaCard() {
          <div className='card-1'>
             <div className='panel-header'>
                <h3 className='panel-title'>
-                  <VscDeviceCameraVideo className='media-icon' />
-                  <a href='/#' className='panel-title-link'>
+                  <a href='/#' className='panel-title-link'><span className='media-'><VscDeviceCameraVideo className='media-icon' /></span>
                      Відеооператори</a>
                </h3>
                <a href="/#"><img alt='card-1' className='img-responsive' src={CategoryGridImage2} /></a>
 
             </div>
             <ul className='media-list'>
-               <li>
+               <li className='media-list-li'>
                   <a href="/#">
                      <div><img src={PhSm1} className='img-sm-round' alt="card1-media1" /></div>
                      <div className='media-body'>
@@ -88,7 +82,7 @@ export default function ImgMediaCard() {
                      </div>
                   </a>
                </li>
-               <li>
+               <li className='media-list-li'>
                   <a href="/#">
                      <div><img src={PhSm2} className='img-sm-round' alt="card1-media1" /></div>
                      <div className='media-body'>
@@ -97,7 +91,7 @@ export default function ImgMediaCard() {
                      </div>
                   </a>
                </li>
-               <li>
+               <li className='media-list-li'>
                   <a href="/#">
                      <div><img src={PhSm3} className='img-sm-round' alt="card1-media1" /></div>
                      <div className='media-body'>
@@ -112,14 +106,13 @@ export default function ImgMediaCard() {
          <div className='card-1'>
             <div className='panel-header'>
                <h3 className='panel-title'>
-                  <IoMusicalNotesOutline className='media-icon' />
-                  <a href='/#' className='panel-title-link'>Музиканти</a>
+                  <a href='/#' className='panel-title-link'><span className='media-span'><IoMusicalNotesOutline className='media-icon' /></span>Музиканти</a>
                </h3>
                <a href="/#"><img alt='card-1' className='img-responsive' src={CategoryGridImage3} /></a>
 
             </div>
             <ul className='media-list'>
-               <li>
+               <li className='media-list-li'>
                   <a href="/#">
                      <div><img src={PhSm1} className='img-sm-round' alt="card1-media1" /></div>
                      <div className='media-body'>
@@ -128,7 +121,7 @@ export default function ImgMediaCard() {
                      </div>
                   </a>
                </li>
-               <li>
+               <li className='media-list-li'>
                   <a href="/#">
                      <div><img src={PhSm2} className='img-sm-round' alt="card1-media1" /></div>
                      <div className='media-body'>
@@ -137,7 +130,7 @@ export default function ImgMediaCard() {
                      </div>
                   </a>
                </li>
-               <li>
+               <li className='media-list-li'>
                   <a href="/#">
                      <div><img src={PhSm3} className='img-sm-round' alt="card1-media1" /></div>
                      <div className='media-body'>
@@ -152,14 +145,14 @@ export default function ImgMediaCard() {
          <div className='card-1'>
             <div className='panel-header'>
                <h3 className='panel-title'>
-                  <TbMicrophone2 className='media-icon' />
-                  <a href='/#' className='panel-title-link'>Ведучі</a>
+
+                  <a href='/#' className='panel-title-link'><span className='media-span'><TbMicrophone2 className='media-icon' /></span> Ведучі</a>
                </h3>
                <a href="/#"><img alt='card-1' className='img-responsive' src={CategoryGridImage4} /></a>
 
             </div>
             <ul className='media-list'>
-               <li>
+               <li className='media-list-li'>
                   <a href="/#">
                      <div><img src={PhSm1} className='img-sm-round' alt="card1-media1" /></div>
                      <div className='media-body'>
@@ -168,7 +161,7 @@ export default function ImgMediaCard() {
                      </div>
                   </a>
                </li>
-               <li>
+               <li className='media-list-li'>
                   <a href="/#">
                      <div><img src={PhSm2} className='img-sm-round' alt="card1-media1" /></div>
                      <div className='media-body'>
@@ -177,7 +170,7 @@ export default function ImgMediaCard() {
                      </div>
                   </a>
                </li>
-               <li>
+               <li className='media-list-li'>
                   <a href="/#">
                      <div><img src={PhSm3} className='img-sm-round' alt="card1-media1" /></div>
                      <div className='media-body'>

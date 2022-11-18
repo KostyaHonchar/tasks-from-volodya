@@ -59,7 +59,7 @@ nav li {
 /* NAV-2 */
 .nav-list li a {
    height: auto;
-   padding: 19px 20px;
+   padding: 18px 20px;
 }
 
 .nav-element:hover {
@@ -99,6 +99,7 @@ nav li {
    background-color: hsla(0, 0%, 5%, .6);
    padding: 13px 25px;
    width: 580px;
+   height: 100px;
    margin: auto;
    border-radius: 3px;
    justify-content: center;
@@ -117,17 +118,20 @@ nav li {
    font-size: 15px;
 }
 
-#combo-box-demo,
-#combo-box-demo2:hover {
-   cursor: pointer;
+div.css-x8ujof-MuiAutocomplete-root {
+   display: inline-block;
+   width: 250px;
+   height: auto;
+   margin-right: 10px;
+   color: #999999;
 }
+
 
 .span-searchbox {
    display: block;
    color: #cecece;
    font-size: 11px;
-   padding-bottom: 5px;
-   margin: 0px 10px;
+   margin: 0px;
 
 }
 
@@ -155,7 +159,7 @@ h1 {
    font-size: 30px;
    font-weight: 300;
    line-height: 1.1;
-   color: #222;
+   color: #4f5259;
 }
 
 h4 {
@@ -202,9 +206,16 @@ h4 {
 .media-icon {
    width: 22px;
    height: 22px;
-   margin-right: 10px;
-   opacity: .5;
+   position: relative;
+   opacity: .6;
+   margin-right: 5px;
    color: #fff;
+}
+
+.panel-title span {
+   display: inline-block;
+   vertical-align: middle;
+   justify-content: center;
 }
 
 .card-1 {
@@ -230,11 +241,17 @@ h4 {
 
 ul a {
    display: flex;
-   color: #333;
    font-size: 14px;
    padding: 8px 10px;
-   border-bottom: 1px solid hsla(0, 0%, 80%, .5);
    align-items: center;
+}
+
+div .media-list-li {
+   border-bottom: 1px solid hsla(0, 0%, 80%, .5);
+}
+
+.media-list-li div {
+   color: #333;
 }
 
 .ellipsis {
@@ -268,13 +285,9 @@ ul a {
    background-color: #fff;
 }
 
-.panel-header img:hover,
-.panel-header h3:hover {
+.card-1 .panel-header:hover,
+.cards-row .panel-header:hover {
    border-radius: 4px;
    -webkit-filter: brightness(89%);
    filter: brightness(0.89);
-}
-
-.panel-header .panel-title :hover {
-   color: white;
 }
