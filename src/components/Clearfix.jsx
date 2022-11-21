@@ -21,7 +21,7 @@ export default function Clearfix() {
                <div className="info">
                   <h2 className="title">Львів</h2>
                   <div className="description">
-                     4751 професіоналів
+                     4752 професіоналів
                      <br />
                      для вашого весілля
                   </div>
